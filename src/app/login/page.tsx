@@ -36,36 +36,39 @@ export default function ZerodhaLogin() {
 
     return <div className='flex justify-center h-dvh'>
         <Container className="p-3 lg:w-[50%!important]  mt-40">
-            <Form>
+            <Form autoComplete="on">
                 <Form.Group className="mb-3">
                     <Form.Label>USER_ID</Form.Label>
                     <Form.Control
-                        type='string'
+                        type='text'
                         placeholder='Enter the USER_ID'
                         value={userId}
                         onChange={(e) => setUserId(e.target.value)}
-                        name='USER_ID'
+                        name="userId"
+                        autoComplete="userId"
                     />
                 </Form.Group>
 
                 <Form.Group className="mb-3">
                     <Form.Label>API_KEY</Form.Label>
                     <Form.Control
-                        type='string'
+                        type='text'
                         placeholder='Enter the API_KEY'
                         value={apiKey}
                         onChange={(e) => setApiKey(e.target.value)}
-                        name='API_KEY'
+                        name='password'
+                        autoComplete="password"
                     />
                 </Form.Group>
                 <Form.Group className="mb-3">
                     <Form.Label>API_SECRET</Form.Label>
                     <Form.Control
-                        type='string'
+                        type='text'
                         placeholder='Enter the API_SECRET'
                         value={secretKey}
                         onChange={(e) => setApiSecret(e.target.value)}
-                        name='API_KEY'
+                        name='API_SECRET'
+                        autoComplete='current-password'
                     />
                 </Form.Group>
                 <Form.Group className="mb-3 flex justify-center items-center gap-8">
